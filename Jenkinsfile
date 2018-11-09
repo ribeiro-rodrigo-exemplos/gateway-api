@@ -30,7 +30,7 @@ pipeline{
 
                         'buildName' : buildInfo.name, 
                         'buildNumber' : buildInfo.number, 
-                        'targetRepo' : 'npm-stagging', 
+                        'targetRepo' : 'npm-local-release', 
                         'status' : 'Released',  
                     ]
 
