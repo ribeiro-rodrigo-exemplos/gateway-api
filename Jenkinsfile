@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                
+
                 sh 'npm pack'
                 script {
                     
@@ -31,7 +31,7 @@ pipeline{
                         'buildName' : buildInfo.name, 
                         'buildNumber' : buildInfo.number, 
                         'targetRepo' : 'npm-stagging', 
-                        'status' : 'Stagging',  
+                        'status' : 'Released',  
                     ]
 
                     Artifactory.addInteractivePromotion server: server, promotionConfig: promotionConfig, displayName: "Promover componente"
